@@ -170,10 +170,10 @@
 
             <div id="content-attendance" class="hidden space-y-6">
                 <div id="start-scan-section" class="text-center bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto border-2 border-pink-500 dark:border-pink-700">
-                    <h2 class="text-2xl font-bold mb-2 text-white bg-green-200 p-2 rounded">เริ่มการเช็คชื่อ</h2>
-<p class="text-white mb-6 bg-green-200 p-2 rounded">กรุณาเลือกกิจกรรมที่ต้องการเช็คชื่อ</p>
+                    <h2 class="text-2xl font-bold mb-2 text-white bg-black p-2 rounded">เริ่มการเช็คชื่อ</h2>
+<p class="text-white mb-6 bg-black p-2 rounded">กรุณาเลือกกิจกรรมที่ต้องการเช็คชื่อ</p>
 
-<div id="teacher-info-display" class="hidden mb-6 p-4 bg-green-200/50 rounded-lg animate-fade-in">
+<div id="teacher-info-display" class="hidden mb-6 p-4 bg-black/50 rounded-lg animate-fade-in">
     <div class="flex items-center gap-4">
         <img id="teacher-info-image" src="" class="w-16 h-16 rounded-full object-cover border-2 border-gray-300">
         <div class="text-left">
@@ -187,7 +187,7 @@
     <label for="class-select" class="block text-sm font-medium text-white mb-1 text-left">
         1. เลือกชั้นเรียน:
     </label>
-    <select id="class-select" class="w-full border border-gray-700 rounded-lg p-3 bg-green-200 text-white">
+    <select id="class-select" class="w-full border border-gray-700 rounded-lg p-3 bg-black text-white">
         <option value="">-- กรุณาเลือกชั้นเรียน --</option>
     </select>
 </div>
@@ -196,7 +196,7 @@
     <label for="subject-select" class="block text-sm font-medium text-white mb-1 text-left">
         2. เลือกกิจกรรม:
     </label>
-    <select id="subject-select" class="w-full border rounded-lg p-3 bg-green-200 text-white" disabled>
+    <select id="subject-select" class="w-full border rounded-lg p-3 bg-black text-white" disabled>
         <option value="">-- กรุณาเลือกกิจกรรม --</option>
     </select>
 </div>
@@ -205,16 +205,16 @@
     <label for="camera-select" class="block text-sm font-medium text-white mb-1 text-center">
         เลือกกล้อง:
     </label>
-    <select id="camera-select" class="w-full border rounded-lg p-2 bg-green-200 text-white disabled:bg-green-100" disabled>
+    <select id="camera-select" class="w-full border rounded-lg p-2 bg-black text-white disabled:bg-gray-700" disabled>
         <option>กำลังโหลดรายการกล้อง...</option>
     </select>
 </div>
 
-<button id="start-scan-btn" onclick="startScanning()" class="bg-green-400 text-white px-8 py-3 rounded-full hover:bg-green-500 text-lg font-semibold flex items-center justify-center mx-auto gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+<button id="start-scan-btn" onclick="startScanning()" class="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 text-lg font-semibold flex items-center justify-center mx-auto gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
     <i data-lucide="camera"></i><span>เริ่มเช็คชื่อ</span>
 </button>
 
-<button id="manual-check-btn" onclick="startManualCheck()" class="mt-4 bg-green-400 text-white px-8 py-3 rounded-full hover:bg-green-500 text-lg font-semibold flex items-center justify-center mx-auto gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
+<button id="manual-check-btn" onclick="startManualCheck()" class="mt-4 bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 text-lg font-semibold flex items-center justify-center mx-auto gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
     <i data-lucide="list-checks"></i><span>เช็คชื่อ/แก้ไข ด้วยตนเอง</span>
 </button>
 
