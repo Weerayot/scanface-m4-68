@@ -73,7 +73,7 @@
                  <div class="bg-white  sm:p-6 rounded-xl shadow-lg border-2 border-pink-500 dark:border-pink-700 text-gray-800 dark:text-white">
 
                  <div class="flex flex-col sm:flex-row items-center justify-between mb-4 gap-4">
-                         <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-300">ภาพรวมการเข้าเรียน</h2>
+                         <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-300">ภาพรวมการเข้าร่วมกิจกรรม</h2>
                         <input type="date" id="dashboard-date" class="border rounded-lg p-2 w-full sm:w-auto bg-transparent dark:text-gray-200 dark:border-gray-600">
                     </div>
       
@@ -81,7 +81,7 @@
                         
                         <div class="bg-gradient-to-br from-emerald-500 to-emerald-700 text-white dark:from-emerald-600 dark:to-emerald-800 p-6 rounded-xl shadow-md flex items-center justify-between">
                             <div>
-                                <h3 class="text-sm font-medium text-emerald-100">มาเรียน (รวมทุกวิชา)</h3>
+                                <h3 class="text-sm font-medium text-emerald-100">มา (รวมทุกกิจกรรม)</h3>
                                 <p id="stat-present" class="text-4xl font-bold">0</p>
                             </div>
                             <i data-lucide="user-check-2" class="w-12 h-12 text-emerald-300 opacity-60"></i>
@@ -89,7 +89,7 @@
                         
                         <div class="bg-gradient-to-br from-pink-500 to-pink-700 text-white dark:from-pink-600 dark:to-pink-800 p-6 rounded-xl shadow-md flex items-center justify-between">
                             <div>
-                                <h3 class="text-sm font-medium text-pink-100">ขาด/ลา (รวมทุกวิชา)</h3>
+                                <h3 class="text-sm font-medium text-pink-100">ขาด/ลา (รวมทุกกิจกรรม)</h3>
                                 <p id="stat-absent" class="text-4xl font-bold">0</p>
                             </div>
                             <i data-lucide="user-x-2" class="w-12 h-12 text-pink-300 opacity-60"></i>
@@ -98,7 +98,7 @@
 
                     <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 mt-6">
                         <div class="lg:col-span-2 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border-2 border-pink-500 dark:border-pink-700">
-                       <h3 class="font-semibold mb-2 text-center">สรุปการเข้าเรียนภาพรวม</h3>
+                       <h3 class="font-semibold mb-2 text-center">สรุปการเข้าร่วมกิจกรรมภาพรวม</h3>
                              <div class="max-w-[250px] mx-auto">
                                 <canvas id="attendance-pie-chart"></canvas>
                              </div>
@@ -107,7 +107,7 @@
                         <div class="lg:col-span-3 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border-2 border-pink-500 dark:border-pink-700">
                             <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-2">
           
-                       <h3 class="font-semibold text-gray-800 dark:text-gray-200">ภาพรวมรายวิชา</h3>
+                       <h3 class="font-semibold text-gray-800 dark:text-gray-200">ภาพรวมรายกิจกรรม</h3>
                                 <div class="flex-shrink-0">
                                     <select id="summary-period" class="border rounded-lg p-1.5 bg-transparent dark:text-gray-200 dark:border-gray-600 text-sm">
                                         <option value="day">รายวัน</option>
@@ -122,7 +122,7 @@
                                 <div class="text-center py-8 md:col-span-2">
       
                                    <div class="loader w-8 h-8 rounded-full border-4 border-gray-200 dark:border-gray-700 mx-auto"></div>
-                                    <p class="mt-2 text-sm text-gray-500">กำลังโหลดข้อมูลรายวิชา...</p>
+                                    <p class="mt-2 text-sm text-gray-500">กำลังโหลดข้อมูลรายกิจกรรม...</p>
                        
                          </div>
                             </div>
@@ -171,7 +171,7 @@
             <div id="content-attendance" class="hidden space-y-6">
                 <div id="start-scan-section" class="text-center bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg max-w-lg mx-auto border-2 border-pink-500 dark:border-pink-700">
                     <h2 class="text-2xl font-bold mb-2">เริ่มการเช็คชื่อ</h2>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">กรุณาเลือกรายวิชาที่ต้องการเช็คชื่อ</p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-6">กรุณาเลือกกิจกรรมที่ต้องการเช็คชื่อ</p>
        
       
                     <div id="teacher-info-display" class="hidden mb-6 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg animate-fade-in">
@@ -195,7 +195,7 @@
                    <div class="max-w-xs mx-auto mb-6">
                         <label for="subject-select" class="block text-sm font-medium text-gray-700 dark:text-gray-400 mb-1 text-left">2. เลือกรายวิชา:</label>
                         <select id="subject-select" class="w-full border rounded-lg p-3 bg-transparent dark:text-gray-200 dark:border-gray-600" disabled>
-                            <option value="">-- กรุณาเลือกรายวิชา --</option>
+                            <option value="">-- กรุณาเลือกกิจกรรม --</option>
                         </select>
                    </div>
                     <div class="max-w-xs mx-auto mb-4 w-full">
@@ -256,10 +256,10 @@
             <div id="content-manage" class="hidden space-y-6">
                 <div class="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg border-2 border-pink-500 dark:border-pink-700">
                     <div class="flex flex-col sm:flex-row justify-between items-center mb-4 gap-4">
-                        <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-300">จัดการข้อมูลรายวิชา</h2>
+                        <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-300">จัดการข้อมูลกิจกรรม</h2>
      
                          <button onclick="openSubjectModal()" class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 flex items-center space-x-2 w-full sm:w-auto justify-center">
-                            <i data-lucide="book-plus"></i><span>เพิ่มรายวิชา</span>
+                            <i data-lucide="book-plus"></i><span>เพิ่มกิจกรรม</span>
                         </button>
                
              </div>
@@ -269,7 +269,7 @@
                  
                                <tr>
                                     <th class="p-3">รูป</th>
-                                    <th class="p-3">ชื่อวิชา</th>
+                                    <th class="p-3">ชื่อกิจกรรม</th>
            
                                      <th class="p-3">ชื่อผู้สอน</th>
                                     <th class="p-3 text-center">จัดการ</th>
@@ -285,7 +285,7 @@
 
             <div id="content-report" class="hidden">
                 <div class="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg space-y-4 border-2 border-pink-500 dark:border-pink-700">
-                    <h2 class="text-xl font-bold">รายงานสถิติการมาเรียน</h2>
+                    <h2 class="text-xl font-bold">รายงานสถิติการมาร่วมกิจกรรม</h2>
              
                    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
                         <div>
@@ -296,10 +296,10 @@
                         </div>
          
                        <div>
-                            <label for="report-subject-filter" class="block font-medium mb-1 text-sm">เลือกรายวิชา:</label>
+                            <label for="report-subject-filter" class="block font-medium mb-1 text-sm">เลือกรายกิจกรรม:</label>
                             <select id="report-subject-filter" class="w-full border rounded-lg p-2 bg-transparent dark:text-gray-200 dark:border-gray-600">
                 
-                                 <option value="all">ทุกรายวิชา</option>
+                                 <option value="all">ทุกรายกิจกรรม</option>
                             </select>
                         </div>
                         <div>
@@ -334,15 +334,15 @@
                                      <tr>
                                         <th class="p-3 text-left">ชั้น</th>
                 
-                                         <th class="p-3 text-left">รายวิชา</th>
+                                         <th class="p-3 text-left">รายกิจกรรม</th>
                                          <th class="p-3 text-center">นักเรียนทั้งหมด</th>
                                
                                          <th class="p-3 text-center">มา</th>
                                          <th class="p-3 text-center">ขาด</th>
                                         <th class="p-3 text-center">ลา</th>
     
-                                         <th class="p-3 text-center">รวมมาเรียน</th>
-                                        <th class="p-3 text-center">% มาเรียน</th>
+                                         <th class="p-3 text-center">รวมมาร่วมกิจกรรม</th>
+                                        <th class="p-3 text-center">% มา</th>
                   
                                    </tr>
                                  </thead>
@@ -372,7 +372,7 @@
                                 <button onclick="sendPresentReportToLine()" id="send-present-line-btn" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-700 w-full sm:w-auto flex items-center justify-center gap-2 disabled:bg-gray-400 disabled:cursor-not-allowed" disabled>
                   
                                      <i data-lucide="user-check" class="w-5 h-5"></i>
-                                    <span>ส่งแจ้งเตือน (มาเรียน)</span>
+                                    <span>ส่งแจ้งเตือน (มา)</span>
                                 </button>
           
                            </div>
@@ -384,7 +384,7 @@
         
                  <div id="content-summary" class="hidden">
                 <div class="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-lg space-y-4 border-2 border-pink-500 dark:border-pink-700">
-                    <h2 class="text-xl font-bold">สรุปการมาเรียนและคะแนน</h2>
+                    <h2 class="text-xl font-bold">สรุปการมาร่วมกิจกรรมและคะแนน</h2>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                         
                           <div>
@@ -416,7 +416,7 @@
                   
                        <div id="summary-results-container" class="mt-6">
                         <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-lg font-semibold">ภาพรวมรายวิชา</h3>
+                            <h3 class="text-lg font-semibold">ภาพรวมรายกิจกรรม</h3>
                              <button onclick="exportSummaryToExcel()" id="export-excel-btn" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm flex items-center gap-2 hidden">
                                 <i data-lucide="file-down"></i><span>ส่งออกเป็น Excel</span>
                             </button>
@@ -429,14 +429,14 @@
                                  <tr>
                                         <th class="p-3 text-left">ชั้น</th>
                                         
-                                         <th class="p-3 text-left">รายวิชา</th>
+                                         <th class="p-3 text-left">รายกิจกรรม</th>
                                         <th class="p-3 text-center">นักเรียนทั้งหมด</th>
                                         <th class="p-3 text-center">มา</th>
              
                                          <th class="p-3 text-center">ขาด</th>
                                         <th class="p-3 text-center">ลา</th>
                            
-                                         <th class="p-3 text-center">% การเข้าเรียน</th>
+                                         <th class="p-3 text-center">% การเข้าร่วมกิจกรรม</th>
                                     </tr>
                                 </thead>
                
@@ -462,7 +462,7 @@
                                         <th class="p-3 text-center">ขาด</th>
                     
                                          <th class="p-3 text-center">ลา</th>
-                                        <th class="p-3 text-center">คะแนนเข้าเรียน</th>
+                                        <th class="p-3 text-center">คะแนนเข้าร่วมกิจกรรม</th>
                                    
                                    </tr>
                                 </thead>
@@ -783,7 +783,7 @@
             filteredForOverall.forEach(rec => {
                 const key = `${rec.timestamp.toDateString()}-${rec.id}-${rec.subject}`;
                 if (uniqueDailyChecks.has(key)) return;
-                if (rec.status === 'มาเรียน') {
+                if (rec.status === 'มา') {
                     presentCount++;
                 } else {
                     absentOrLeaveCount++;
@@ -825,7 +825,7 @@
                                <div class="text-green-500">
                                     <i data-lucide="user-check" class="mx-auto w-6 h-6"></i>
                                     <p class="text-xl font-bold">${item.present}</p>
-                                    <p class="text-xs">มาเรียน</p>
+                                    <p class="text-xs">มา</p>
                                 </div>
                                  <div class="text-red-500">
                                      <i data-lucide="user-x" class="mx-auto w-6 h-6"></i>
@@ -876,7 +876,7 @@
                 pieChart = new Chart(ctx, { type: 'pie', data: { labels: ['ไม่มีข้อมูล'], datasets: [{ data: [1], backgroundColor: ['#d1d5db'] }] }, options: { plugins: { legend: { display: false }, tooltip: { enabled: false } } }});
                 return; 
             }
-            pieChart = new Chart(ctx, { type: 'pie', data: { labels: ['มาเรียน', 'ขาด/ลา'], datasets: [{ data: [present, absent], backgroundColor: ['#34D399', '#F87171'] }] }, options: { responsive: true, maintainAspectRatio: false } });
+            pieChart = new Chart(ctx, { type: 'pie', data: { labels: ['มา', 'ขาด/ลา'], datasets: [{ data: [present, absent], backgroundColor: ['#34D399', '#F87171'] }] }, options: { responsive: true, maintainAspectRatio: false } });
         }
         
         // --- ATTENDANCE PROCESS ---
@@ -884,7 +884,7 @@
             try {
                 await loadSubjects();
                 const subjectSelect = document.getElementById('subject-select');
-                subjectSelect.innerHTML = '<option value="">-- กรุณาเลือกรายวิชา --</option>';
+                subjectSelect.innerHTML = '<option value="">-- กรุณาเลือกกิจกรรม --</option>';
 
                 if (subjects.length > 0) {
                     subjects.forEach(subject => {
@@ -974,9 +974,9 @@
         function startScanning() {
             initSpeechSynthesis();
             const selectedSubject = document.getElementById('subject-select').value;
-            if (!selectedSubject) { alert('กรุณาเลือกรายวิชาก่อน'); return; }
+            if (!selectedSubject) { alert('กรุณาเลือกกิจกรรมก่อน'); return; }
             currentSubject = selectedSubject;
-            document.getElementById('current-subject-display').innerText = `| วิชา: ${currentSubject}`;
+            document.getElementById('current-subject-display').innerText = `| กิจกรรม: ${currentSubject}`;
             checkedInToday.clear();
             document.getElementById('start-scan-section').classList.add('hidden');
             document.getElementById('scanning-section').classList.remove('hidden');
@@ -990,7 +990,7 @@
             if (!selectedSubject) { alert('กรุณาเลือกรายวิชาก่อน'); return; }
             
             currentSubject = selectedSubject;
-            document.getElementById('current-subject-display').innerText = `| วิชา: ${currentSubject}`;
+            document.getElementById('current-subject-display').innerText = `| กิจกรรม: ${currentSubject}`;
             checkedInToday.clear();
             
             try {
@@ -1051,7 +1051,7 @@
 
             if (existingRecord) {
                 let statusColor = 'text-gray-500';
-                if (existingRecord.status === 'มาเรียน') statusColor = 'text-green-600 dark:text-green-400';
+                if (existingRecord.status === 'มา') statusColor = 'text-green-600 dark:text-green-400';
                 else if (existingRecord.status === 'ขาด') statusColor = 'text-red-600 dark:text-red-400';
                 else if (existingRecord.status === 'ลา') statusColor = 'text-yellow-600 dark:text-yellow-400';
 
@@ -1066,7 +1066,7 @@
                 const defaultButtonClasses = "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600";
                 statusContainer.innerHTML = `
                     <div class="flex gap-2 items-center" id="status-buttons-${studentId}">
-                        <button onclick="markStatus('${studentId}', 'มาเรียน')" class="${buttonBaseClasses} ${defaultButtonClasses}">มาเรียน</button>
+                        <button onclick="markStatus('${studentId}', 'มา')" class="${buttonBaseClasses} ${defaultButtonClasses}">มา</button>
                         <button onclick="markStatus('${studentId}', 'ขาด')" class="${buttonBaseClasses} ${defaultButtonClasses}">ขาด</button>
          
                           <button onclick="markStatus('${studentId}', 'ลา')" class="${buttonBaseClasses} ${defaultButtonClasses}">ลา</button>
@@ -1082,7 +1082,7 @@
             const defaultButtonClasses = "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600";
             statusContainer.innerHTML = `
                 <div class="flex gap-2 items-center" id="status-buttons-${studentId}">
-                    <button onclick="markStatus('${studentId}', 'มาเรียน')" class="${buttonBaseClasses} ${defaultButtonClasses}">มาเรียน</button>
+                    <button onclick="markStatus('${studentId}', 'มา')" class="${buttonBaseClasses} ${defaultButtonClasses}">มา</button>
                     <button onclick="markStatus('${studentId}', 'ขาด')" class="${buttonBaseClasses} ${defaultButtonClasses}">ขาด</button>
                     <button 
  onclick="markStatus('${studentId}', 'ลา')" class="${buttonBaseClasses} ${defaultButtonClasses}">ลา</button>
@@ -1141,7 +1141,7 @@
                 const selectedClasses = ['bg-blue-600', 'text-white', 'dark:bg-blue-600', 'dark:text-white'];
                 allButtons.forEach(btn => { btn.classList.remove(...selectedClasses); btn.classList.add(...defaultClasses); });
                 let selectedButton;
-                if (status === 'มาเรียน') selectedButton = allButtons[0];
+                if (status === 'มา') selectedButton = allButtons[0];
                 else if (status === 'ขาด') selectedButton = allButtons[1];
                 else if (status === 'ลา') selectedButton = allButtons[2];
                 if (selectedButton) { selectedButton.classList.remove(...defaultClasses); selectedButton.classList.add(...selectedClasses);
@@ -1244,7 +1244,7 @@
                 id: student.id, name: student.name, class: student.class, 
                 timestamp: new Date().toISOString(), 
                 location: currentGeoLocation ? `${currentGeoLocation.lat},${currentGeoLocation.lng}` : 'N/A', 
-                status: 'มาเรียน', 
+                status: 'มา', 
                 subject: currentSubject 
             };
             checkedInToday.set(String(student.id), record);
@@ -1626,7 +1626,7 @@
               
                    });
                     const absentPreview = lineData.map(d => `<div><span class="text-red-500">[ขาด/ลา]</span> ${d.id} ${d.name} (${d.status})</div>`).join('');
-                    const presentPreview = presentData.map(d => `<div><span class="text-green-500">[มาเรียน]</span> ${d.id} ${d.name}</div>`).join('');
+                    const presentPreview = presentData.map(d => `<div><span class="text-green-500">[มา]</span> ${d.id} ${d.name}</div>`).join('');
                     linePreview.innerHTML = absentPreview + presentPreview || '<p class="text-gray-500">ไม่มีข้อมูลนักเรียน</p>';
                     document.getElementById('report-title').innerText = `ผลลัพธ์สำหรับวันที่ ${new Date(reportData.dateFilter).toLocaleDateString('th-TH')}`;
                     sendLineBtn.disabled = lineData.length === 0;
@@ -1677,7 +1677,7 @@
                 alert(`เกิดข้อผิดพลาดรุนแรงในการส่ง LINE: ${err.message}`);
             } finally {
                 btn.disabled = false;
-                btn.querySelector('span').innerText = 'ส่งแจ้งเตือน (มาเรียน)';
+                btn.querySelector('span').innerText = 'ส่งแจ้งเตือน (มา)';
             }
         }
     
@@ -1753,7 +1753,7 @@
             const attendanceDetails = summaryReportData.details.filter(d => d.class === className && d.subject === subjectName);
             studentsInClass.forEach(student => {
                 const studentRecords = attendanceDetails.filter(d => d.id == student.id);
-                const presentCount = studentRecords.filter(r => r.status === 'มาเรียน').length;
+                const presentCount = studentRecords.filter(r => r.status === 'มา').length;
                 const absentCount = studentRecords.filter(r => r.status === 'ขาด').length;
                 const leaveCount = studentRecords.filter(r => r.status === 'ลา').length;
       
